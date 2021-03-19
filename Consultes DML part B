@@ -1,0 +1,8 @@
+-- Consultes amb geolocalització --
+SELECT restaurant_id,CONCAT('Restaurant ',nom) AS nom
+	FROM restaurants
+WHERE (ST_Distance_Sphere(coord,POINT(41.64497401406645,2.739888768429011))) < 30000
+UNION
+SELECT hotel_id,CONCAT('Hotel ',nom)
+	FROM hotels
+WHERE (ST_Distance_Sphere(coord,POINT(41.83952506121565,2.739888768429011))) < 30000;
