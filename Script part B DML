@@ -1,0 +1,49 @@
+-- Afegim provincia i geolocalització a la taula d'hotels --
+ALTER TABLE hotels
+ADD COLUMN provincia VARCHAR(15)
+		AFTER poblacio_id,
+ADD COLUMN coord POINT 
+	AFTER provincia;
+    
+-- Afegim els 5 restuarants amb geolocalitzacions --
+INSERT INTO restaurants (restaurant_id,nom,estrelles,adreca,poblacio_id,provincia,coord)
+	VALUES 	(1,'Croaks',5,'Gran Via de Jaume I, 1, 17001 Girona',30,'GIRONA',ST_GeomFromText( 'POINT(41.9855639 2.822239444444444)' )),
+			(2,'Shaku Shaku',4,'Avinguda del Doctor, Avinguda de Lluís Pericot, 24, 17003 Girona',30,'GIRONA',ST_GeomFromText( 'POINT(41.9831 2.8249)' )),
+            (3,'La Nou',4,'Av. d\'Europa, 43, 17300 Blanes, Girona',48,'GIRONA',ST_GeomFromText( 'POINT(41.6708211 2.7796096)' )),
+			(4,'La Salinera',4,'Av. Onze de Setembre, 93, 17230 Sant Joan de Palamós, Girona',39,'GIRONA',ST_GeomFromText( 'POINT(41.8484 3.1291)' )),
+			(5,'Sa Lola',5,'Passeig Pau Casals, 59, 17300 Blanes, Girona',48,'GIRONA',ST_GeomFromText( 'POINT(41.6752474 2.7949133)' ));
+            
+-- Modifiquem 5 hotels per afegir-ne geolocatizacions i millorar la informació de les seves adreçes --
+UPDATE hotels SET 	provincia = 'GIRONA',
+					adreca="Paratge Torremirona, Cala del Contenido Castell, 12, 17230 Palamós, Girona",
+					coord=ST_GeomFromText('POINT(41.8484 3.1291)')
+    WHERE hotel_id = 219;
+    
+UPDATE hotels SET 	provincia = 'GIRONA',
+					adreca="Calle Castell d\'Empordá, 3, 17115 La Bisbal d'Empordà, Girona",
+					coord=ST_GeomFromText('POINT(41.9787347 3.0441448)')
+    WHERE hotel_id = 211;
+
+UPDATE hotels SET 	provincia = 'GIRONA',
+					adreca="Avinguda de Salvador Dalí i Domènech, 170, 17600 Figueres, Girona",
+					coord=ST_GeomFromText('POINT(42.2746467590332 2.953357696533203)')
+    WHERE hotel_id = 277;
+
+UPDATE hotels SET 	provincia = 'GIRONA',
+					adreca="Carretera de Sant Joan, 28, 17867 Camprodon, Girona",
+					coord=ST_GeomFromText('POINT(42.321 2.4807)')
+    WHERE hotel_id = 286;
+
+UPDATE hotels SET 	provincia = 'GIRONA',
+					adreca="Carrer Sant Miquel, 1, 17255 Begur, Girona",
+					coord=ST_GeomFromText('POINT(41.955039978027344 3.2061760425567627)')
+    WHERE hotel_id = 232;
+    
+-- Consultes amb geolocalització --
+SELECT restaurant_id,CONCAT('Restaurant ',nom) AS nom
+	FROM restaurants
+WHERE (ST_Distance_Sphere(coord,POINT(41.64497401406645,2.739888768429011))) < 30000
+UNION
+SELECT hotel_id,CONCAT('Hotel ',nom)
+	FROM hotels
+WHERE (ST_Distance_Sphere(coord,POINT(41.83952506121565,2.739888768429011))) < 30000;
