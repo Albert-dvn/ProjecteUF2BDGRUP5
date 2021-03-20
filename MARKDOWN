@@ -1,7 +1,7 @@
 # PROJECTE
 
 Creem la taula Clients.
-![Clients!](/images/Clients.jpeg)
+![Clients!](/images/Clients.JPEG)
 
 Creem la connexió a la base de dades.
 ![Connexio!](/images/Connexio.jpeg)
