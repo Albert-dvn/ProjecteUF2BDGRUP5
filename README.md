@@ -7,28 +7,28 @@ Creem la taula Clients.
 
 Creem la connexió a la base de dades.
 
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/Connexio.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/Connexio.JPG)
 
 Inserim les dades del fitxer csv amb una consulta sql.
 
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Inserir.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/images/Inserir.JPG)
 
 Agafem el string de totes les dades i el separem, a continuació fiquem cada informació a una casella.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Agafar.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/images/Agafar.JPG)
 
 Conectem a la base de dades, fem un bucle per cada reserva que tenim, fins a 26990 i farem el random del client_id per ficar-lo a continuació a la següent reserva_id
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Connectar.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/images/Connectar.JPG)
 
 A continuació hem realitzat les consultes del [Qüestionari](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/Activitat%20Ac1%20-%20Part%20A.2.sql)
 
 Afegim provincia i geolocalització a la taula d'hotels.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/AfegirGeo.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/AfegirGeo.JPG)
 
 Afegim els 5 restuarants amb geolocalitzacions.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Restaurants.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Restaurants.JPG)
 
 Modifiquem 5 hotels per afegir-ne geolocatizacions i millorar la informació de les seves adreçes.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Hotels.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/images/Hotels.JPG)
 
 Consultes amb geolocalització.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images//images/Consultes.jpg)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/images/Consultes.JPG)
