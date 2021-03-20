@@ -1,9 +1,8 @@
 # ProjecteUF2BDGRUP5
 Albert Buch, Alpha Omar Barry, Enric Robert Giner, Joel López
 
-![alt text](https://github.com/EnricRobert/ProjectePantemiaEnricLluis/blob/main/CapturesProjecte/TaulellManual.PNG)
 Creem la taula Clients.
-![Clients](https://github.com/EnricRobert//ProjecteUF2BDGRUP5/images/Clients.jpg)
+![Clients](https://github.com/EnricRobert/ProjecteUF2BDGRUP5/images/Clients.jpg)
 
 Creem la connexió a la base de dades.
 ![Connexio!](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/images/Connexio.jpg)
