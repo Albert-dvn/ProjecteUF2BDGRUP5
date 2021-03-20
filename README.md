@@ -2,7 +2,7 @@
 Albert Buch, Alpha Omar Barry, Enric Robert Giner, Joel López
 
 Creem la taula Clients.
-![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/Clients.JPG)
+![Alt text](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/blob/main/images/clients.JPG)
 
 Creem la connexió a la base de dades.
 ![Connexio!](https://github.com/Albert-dvn/ProjecteUF2BDGRUP5/images/Connexio.jpg)
