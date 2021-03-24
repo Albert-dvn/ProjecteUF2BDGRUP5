@@ -6,7 +6,6 @@ import static java.sql.DriverManager.getConnection;
 
 public class A12 {
     public static void main(String[] args) {
-        int batchSize = 20;
         Connection connection = null;
 
         try {
