@@ -4,11 +4,11 @@ nom VARCHAR(30),
 cognom1 VARCHAR(30),
 sexe CHAR(1),
 data_naixement DATE,
-pais_origen_id INT UNSIGNED,
+pais_origen_id TINYINT UNSIGNED NOT NULL,
 reserva_id INT UNSIGNED,
 CONSTRAINT PK_clients PRIMARY KEY (client_id),
 CONSTRAINT FK_clients_paisos FOREIGN KEY (pais_origen_id)
-REFERENCES paisos (pais_id),
+        REFERENCES paisos (pais_id),
 CONSTRAINT FK_clients_reserves FOREIGN KEY (reserva_id)
-REFERENCES reserves (reserva_id)
+        REFERENCES reserves (reserva_id)
 );
